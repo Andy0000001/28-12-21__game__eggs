@@ -1,0 +1,106 @@
+#game{
+    width: 1224px;
+    height: 768px;
+    border: 3px solid #f5524d;
+    border-radius: 9px;
+    margin: auto;
+    position: relative;
+}
+
+.tree{
+    width: 360px;
+    height: 109%;
+    background-image: url(img/tree.png);
+    background-repeat: no-repeat;
+    background-size: 109%;
+    position: absolute;
+}
+
+#hero{
+    width: 280px;
+    height: 370px;
+    background-image: url(img/hero.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 140px);
+}
+
+.hero-reverse{
+    transform: scaleX(-1);
+}
+
+#glove{
+    width: 110px;
+    height: 60px;
+    background-image: url(img/hand.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    right: -124px;
+    bottom: 140px;
+}
+
+.tree-l{
+    left: 0%;
+}
+
+.tree-r{
+    right: 0%;
+    transform: scaleX(-1);
+}
+
+@keyframes fall {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fall-reverse {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+.present{
+    width: 85px;
+    height: 100px;
+    background-image: url(img/loot1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0px;
+    left: 500px;
+    
+}
+
+.present-t-l{
+    top: 95px;
+    left: 163px;  
+    animation: fall 2s infinite linear;
+}
+
+.present-t-r{
+    top: 95px;
+    left: 977px;
+    animation: fall-reverse 2s infinite linear;  
+}
+
+.present-b-l{
+    top: 420px;
+    left: 163px;  
+    animation: fall 2s infinite linear;
+}
+
+.present-b-r{
+    top: 420px;
+    left: 977px;
+    animation: fall-reverse 2s infinite linear;  
+}
